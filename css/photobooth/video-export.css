@@ -1,0 +1,127 @@
+/* Video Export Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Video Preview Styles */
+#videoPreview {
+    margin: 15px 0;
+}
+
+#exportedVideo {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Download Link Styles */
+#downloadLink, #mobileDownloadLink {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#downloadLink:hover, #mobileDownloadLink:hover {
+    background: #45a049;
+}
+
+/* Mobile Download Button Styles */
+.mobile-only {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .mobile-only {
+        display: inline-block !important;
+    }
+    
+    #downloadLink, #mobileDownloadLink {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+/* Progress Bar Styles */
+#exportProgress {
+    margin: 15px 0;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+/* Button Container Styles */
+.button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.function-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.function-button:hover {
+    background: #45a049;
+}
+
+/* Time Estimate Styles */
+#exportTimeEstimate {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .function-button {
+        width: 100%;
+    }
+} 
